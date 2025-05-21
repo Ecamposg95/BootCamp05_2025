@@ -5,13 +5,21 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ /* Cambiar fuentes */
+body {
+    font-family: 'Lora', serif;
     background-color: #e8ecf0;
     color: #333;
     padding: 40px 20px;
     line-height: 1.6;
   }
+  
+  .left-column h1,
+  .left-column .title,
+  .right-column h2 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
   
   /* Contenedor principal del CV */
   .cv-container {
