@@ -10,7 +10,5 @@ DEVS3
 
 
 
-Emmanuel Campos Genaro 
 
-1.Dayana Sanchez Salvador 
-0d548ee (carpeta Day)
+
