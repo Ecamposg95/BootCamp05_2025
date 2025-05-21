@@ -12,4 +12,5 @@ DEVS
 - DEVS3 Emmanuel Cuestas Uribe
 - DEVS4 Antonio Martinez Andrade 
 - DEVS5 Danna Paola Sánchez Hernández
+- DEVS6 Laura Yesenia Demetrio Castelar
 
