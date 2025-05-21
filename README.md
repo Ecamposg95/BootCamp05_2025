@@ -11,4 +11,5 @@ DEVS
 - DEVS3 Stephany Reyes Rodriguez  
 - DEVS3 Emmanuel Cuestas Uribe
 - DEVS4 Antonio Martinez Andrade 
+- DEVS5 Danna Paola Sánchez Hernández
 
