@@ -2,4 +2,8 @@
 UTVT
 
 
-Emmanuel Campos Genaro 
+SCRUM MASTER -Emmanuel Campos Genaro 
+
+DEVS1
+DEVS2
+DEVS3
