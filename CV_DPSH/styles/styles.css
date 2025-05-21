@@ -15,4 +15,14 @@ body {
     margin-bottom: 40px;
 }
 
+.nombre {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.apellidos {
+    display: block;
+}
+
 
