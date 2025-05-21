@@ -1,0 +1,100 @@
+/* Estilo base para todo el documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+    color: #333;
+  }
+  
+  /* Contenedor principal del CV */
+  .cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+    color: #2c3e50;
+  }
+  
+  header p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  /* Secciones generales */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h2 {
+    font-size: 22px;
+    color: #2980b9;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+  }
+  
+  /* Listas */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  
+  /* Párrafos */
+  p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  
+  /* Personalización de enlaces si los agregas en el futuro */
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 600px) {
+    body {
+      padding: 20px 10px;
+    }
+  
+    .cv-container {
+      padding: 20px;
+    }
+  
+    header h1 {
+      font-size: 24px;
+    }
+  
+    section h2 {
+      font-size: 20px;
+    }
+  }
+  
