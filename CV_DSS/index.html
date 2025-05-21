@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV Dayana Sánchez Salvador</title>
+  <title>CV - Dayana Sánchez Salvador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <div class="cv-container">
-    <div class="left-column">
+  <div class="cv-container fade-in">
+    <div class="left-column slide-in-left">
       <div class="profile-pic">
-        <!-- Si quieres puedes poner una imagen tuya aquí -->
-        <!-- <img src="tu-foto.jpg" alt="Foto de Dayana"> -->
+        <img id="userPhoto" src="https://via.placeholder.com/150" alt="Foto de Dayana">
+        <label class="upload-btn">
+          Cambiar Foto
+          <input type="file" accept="image/*" onchange="loadPhoto(event)">
+        </label>
       </div>
       <h1>Dayana Sánchez Salvador</h1>
-      <p class="title">Estudiante de Desarrollo de Software Multiplataforma</p>
+      <p class="title">Estudiante de Desarrollo de Software</p>
 
       <div class="section">
         <h2>Contacto</h2>
         <ul>
-          <li>Email: dayanesalvadorsanchez@gmail.com</li>
-          <li>Teléfono: 722 674 2482</li>
-          <li>Dirección: Calle Av. Cedros, San Agustín Mimbres</li>
+          <li>📧 dayanesalvadorsanchez@gmail.com</li>
+          <li>📱 722 674 2482</li>
+          <li>📍 San Agustín Mimbres</li>
         </ul>
       </div>
 
@@ -31,32 +35,31 @@
       </div>
     </div>
 
-    <div class="right-column">
+    <div class="right-column slide-in-right">
       <div class="section">
         <h2>Perfil</h2>
-        <p>Soy estudiante de la carrera de Desarrollo de Software Multiplataforma, actualmente cursando el 5° cuatrimestre. Poseo conocimientos en informática adquiridos tanto en la preparatoria como en la universidad. Busco oportunidades para aplicar mis habilidades en programación y desarrollo de software.</p>
+        <p>Soy estudiante de Desarrollo de Software Multiplataforma, actualmente en el 5° cuatrimestre. Tengo experiencia en informática y busco oportunidades para seguir creciendo en el desarrollo web y móvil.</p>
       </div>
 
       <div class="section">
         <h2>Educación</h2>
         <ul>
-          <li><strong>Universidad Tecnológica del Valle de Toluca</strong><br> Desarrollo de Software Multiplataforma – 5° cuatrimestre (2025 – Actualidad)</li>
-          <li><strong>CBT-4</strong><br> Técnico en Informática – Graduación 2023</li>
+          <li><strong>UTVT</strong> — Desarrollo de Software Multiplataforma (2025 – Actualidad)</li>
+          <li><strong>CBT-4</strong> — Técnico en Informática (Graduación 2023)</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2>Experiencia Laboral</h2>
-        <p><strong>Prácticas Profesionales - Genoma Creativo</strong><br> Técnico en Informática (Mayo 2022 – Julio 2022): Instalación y mantenimiento de computadoras, soporte técnico para fallas en software.</p>
+        <h2>Experiencia</h2>
+        <p><strong>Genoma Creativo</strong> (Mayo – Julio 2022): Soporte técnico e instalación de equipos.</p>
       </div>
 
       <div class="section">
         <h2>Cursos</h2>
         <ul>
-          <li>Curador de datos – Promedio: 9</li>
-          <li>Lógica de programación – Promedio: 8.75</li>
-          <li>Instalación y reparación de equipo de cómputo – Promedio: 8.44</li>
-          <li>Ofimática – Promedio: 8.33</li>
+          <li>Curador de Datos – Prom: 9</li>
+          <li>Lógica de Programación – Prom: 8.75</li>
+          <li>Ofimática – Prom: 8.33</li>
         </ul>
       </div>
 
@@ -64,13 +67,19 @@
         <h2>Habilidades</h2>
         <ul>
           <li>Lenguajes: Java, C++</li>
+          <li>Desarrollo Web y Móvil</li>
           <li>Sistemas Operativos: Windows, Linux</li>
-          <li>Trabajo en equipo</li>
-          <li>Desarrollo web y móvil, diseño de interfaces, bases de datos</li>
-          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li>Trabajo en Equipo, Interfaces, Bases de Datos</li>
         </ul>
       </div>
     </div>
   </div>
+
+  <script>
+    function loadPhoto(event) {
+      const image = document.getElementById('userPhoto');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
 </body>
 </html>
