@@ -1,0 +1,202 @@
+/* Estilos base para el body: elimina margenes, define fuente, color de fondo, y centra el contenido con flexbox */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    min-height: 100vh;       /* altura mínima igual a la ventana */
+}
+
+/* Contenedor principal, layout con flexbox, ancho máximo y estilo visual */
+.container {
+    display: flex;              /* contenedor flexible para sidebar y contenido */
+    max-width: 1000px;          /* ancho máximo */
+    width: 100%;                /* ancho completo disponible */
+    background: white;          /* fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+    border-radius: 12px;        /* bordes redondeados */
+    overflow: hidden;           /* oculta contenido que se salga */
+}
+
+/* Barra lateral (sidebar), ocupa el 35% ancho, con fondo degradado y padding */
+.sidebar {
+    width: 35%;
+    position: relative;         /* para posicionar elementos absolutos internos */
+    padding: 20px;
+    background: linear-gradient(to bottom right, #1e3a5f, #2e5d85); /* degradado */
+    color: white;               /* texto blanco */
+    overflow: hidden;
+    z-index: 1;                 /* por encima de elementos con z-index 0 */
+}
+
+/* Fondo translúcido dentro del sidebar con blur */
+.sidebar .bg {
+    position: absolute;         /* posicionamiento absoluto dentro del sidebar */
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);   /* ancho y alto con espacio de 10px por lado */
+    height: calc(100% - 20px);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05); /* blanco muy transparente */
+    backdrop-filter: blur(16px);            /* efecto blur */
+    border-radius: 15px;
+    outline: 1px solid rgba(255, 255, 255, 0.2); /* borde suave */
+}
+
+/* Blob animado decorativo detrás del contenido del sidebar */
+.sidebar .blob {
+    position: absolute;
+    z-index: 0;                 /* detrás del contenido */
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;         /* forma circular */
+    background-color: rgba(8, 8, 8, 0.2);
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease; /* animación continua */
+    transform: translate(-50%, -50%); /* centrar */
+}
+
+/* Definición de la animación del blob */
+@keyframes blob-bounce {
+    0%   { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+    25%  { transform: translate(-100%, -100%) translate3d(100%, 0, 0); }
+    50%  { transform: translate(-100%, -100%) translate3d(100%, 100%, 0); }
+    75%  { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
+    100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+}
+
+/* Imagen de perfil con estilo circular y sombra */
+.sidebar .profile img {
+    display: block;             /* quita espacio extra abajo */
+    margin: 0 auto 15px;        /* centrado horizontal y margen inferior */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;         /* imagen redonda */
+    background: #014e95;        /* fondo azul */
+    box-shadow: 6px 6px 12px #828282, -6px -6px 12px #323232; /* sombra */
+    object-fit: cover;          /* ajusta la imagen sin distorsión */
+    padding: 5px;
+    position: relative;
+    z-index: 2;                 /* encima del fondo y blob */
+}
+
+/* Títulos en el sidebar, con posición relativa para superponer correctamente */
+.sidebar h1,
+.sidebar h2,
+.sidebar h3 {
+    z-index: 2;
+    position: relative;
+}
+
+/* Estilo específico para h1 en sidebar */
+.sidebar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Clase para animar subrayado al pasar el mouse */
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 4px;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 123, 237); /* línea azul */
+  transform: scaleX(0);                /* inicia invisible */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+/* Al hacer hover se muestra la línea de subrayado */
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Estilo para subtítulos h3 en sidebar */
+.sidebar h3 {
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+/* Listas dentro del sidebar: sin estilo por defecto, tamaño de fuente */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Espaciado entre elementos de la lista */
+.sidebar ul li {
+    margin: 5px 0;
+}
+
+/* Estilo para enlaces dentro del sidebar */
+.sidebar a {
+    color: #cce6ff;           /* color azul claro */
+    text-decoration: none;    /* sin subrayado */
+}
+
+/* Párrafos dentro del sidebar con tamaño y margen */
+.sidebar p {
+    font-size: 14px;
+    margin: 10px 0;
+    z-index: 2;
+    position: relative;
+}
+
+/* Contenido principal, ocupa 65% del ancho con padding y texto oscuro */
+.contenido {
+    width: 65%;
+    padding: 30px;
+    color: #333;
+}
+
+/* Estilo para títulos h3 en contenido */
+.contenido h3 {
+    color: #1e3a5f;                  /* azul oscuro */
+    border-bottom: 2px solid #1e3a5f; /* línea debajo */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;       /* texto en mayúsculas */
+}
+
+/* Párrafos en secciones objetivo, trabajo, y lista de idiomas */
+.objetivo p,
+.trabajo p,
+.idiomas ul {
+    font-size: 14px;
+    line-height: 1.5;               /* altura de línea para legibilidad */
+}
+
+/* Separación entre trabajos */
+.trabajo {
+    margin-bottom: 20px;
+}
+
+/* Títulos h4 en trabajos, color azul y sin margen arriba */
+.trabajo h4 {
+    margin: 0 0 5px 0;
+    color: #1e3a5f;
+}
+
+/* Lista de idiomas con estilo de lista de disco y sangría */
+.idiomas ul {
+    list-style: disc;
+    padding-left: 20px;
+}
