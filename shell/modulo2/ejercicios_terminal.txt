@@ -1,0 +1,30 @@
+# Respuestas ejercicios terminal
+
+1. Archivos .txt encontrados:
+/home/emmanuel/App-Mascotas/public/robots.txt
+/home/emmanuel/.oh-my-zsh/LICENSE.txt
+/home/emmanuel/.oh-my-zsh/.github/workflows/dependencies/requirements.txt
+/home/emmanuel/.oh-my-zsh/plugins/emoji/emoji-data.txt
+/home/emmanuel/.oh-my-zsh/plugins/golang/templates/package.txt
+/home/emmanuel/.oh-my-zsh/plugins/golang/templates/search.txt
+/home/emmanuel/BootCamp05_2025/shell/modulo2/ejercicios_terminal.txt
+/home/emmanuel/PRUEBA/archivo.txt
+/home/emmanuel/.pki/nssdb/pkcs11.txt
+
+2. Resultado de buscar "linux" en archivo.txt:
+grep "linux" ejercicios_terminal.txt
+RESULTADO 
+emmanuel@LAPTOP-DOS9N4RD:~/BootCamp05_2025/shell/modulo2$ grep "linux" ejercicios_terminal.txt
+2. Resultado de buscar "linux" en archivo.txt:
+
+3. Número de líneas en archivo.txt:
+wc -l ejercicios_terminal.txt
+RESULTADO 
+emmanuel@LAPTOP-DOS9N4RD:~/BootCamp05_2025/shell/modulo2$ wc -l ejercicios_terminal.txt
+12 ejercicios_terminal.txt
+
+4. El script saludo.sh funcionó correctamente mostrando "Hola Mundo".
+REULTADOS 
+emmanuel@LAPTOP-DOS9N4RD:~/BootCamp05_2025/shell/modulo2$ chmod +x saludo.sh
+emmanuel@LAPTOP-DOS9N4RD:~/BootCamp05_2025/shell/modulo2$ ./saludo.sh
+Hola Ema
