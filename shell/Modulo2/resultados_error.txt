@@ -1,0 +1,8 @@
+./ejercicios_terminal.txt:1. Listar archivos y carpetas:
+./ejercicios_terminal.txt:2. Buscar archivos por nombre:
+./ejercicios_terminal.txt:3. Buscar archivos por tipo de archivo:
+./ejercicios_terminal.txt:4. Buscar texto dentro de archivos:
+./ejercicios_terminal.txt:╰─➤  grep "archivos" ejercicios_terminal.txt
+./ejercicios_terminal.txt:1. Listar archivos y carpetas:
+./ejercicios_terminal.txt:2. Buscar archivos por nombre:
+./ejercicios_terminal.txt:3. Buscar archivos por tipo de archivo:
