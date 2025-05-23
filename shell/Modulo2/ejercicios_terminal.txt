@@ -1,40 +1,42 @@
-1. Listar archivos y carpetas:
+# Comandos Básicos en la Terminal
+
+## 1. Listar archivos y carpetas:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025  ‹CPS*›
 ╰─➤  ls -l
 total 8
 drwxr-xr-x 3 palmac palmac 4096 May 22 15:01 CV_CPS
 drwxr-xr-x 6 palmac palmac 4096 May 23 06:42 shell
 
-2. Buscar archivos por nombre:
+## 2. Buscar archivos por nombre:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025  ‹CPS*›
 ╰─➤  find . -name "ejercicios_terminal.txt"
 ./shell/Modulo2/ejercicios_terminal.txt
 
-3. Buscar archivos por tipo de archivo:
+## 3. Buscar archivos por tipo de archivo:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025  ‹CPS*›
 ╰─➤  find . -name "*.md"
 ./shell/Modulo1/zsh_config.md
 
-4. Buscar texto dentro de archivos:
+## 4. Buscar texto dentro de archivos:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
 ╰─➤  grep "archivos" ejercicios_terminal.txt
 1. Listar archivos y carpetas:
 2. Buscar archivos por nombre:
 3. Buscar archivos por tipo de archivo:
 
-5. Contar líneas, palabras y caracteres:
+## 5. Contar líneas, palabras y caracteres:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
 ╰─➤  wc ejercicios_terminal.txt | awk '{print "Líneas: "$1", Palabras: "$2", Caracteres: "$3}'
 Líneas: 25, Palabras: 91, Caracteres: 825
 
-6. Crear un archivo con resultados:
+## 6. Crear un archivo con resultados:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
 ╰─➤  grep -r "archivos" --include="ejercicios_terminal.txt" . > resultados_error.txt
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
 ╰─➤  ls
 ejercicios_terminal.txt  resultados_error.txt
 
-7. Crear y ejecutar un script básico:
+## 7. Crear y ejecutar un script básico:
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
 ╰─➤  nano script.sh
 ╭─palmac@LAPTOP-D9HAA6NE ~/BootCamp05_2025/shell/Modulo2  ‹CPS*›
