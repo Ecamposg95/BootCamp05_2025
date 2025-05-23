@@ -1,0 +1,19 @@
+STEPHANY REYES RODRIGUIEZ
+
+#Configuracion de oh-my-zsh
+
+
+## Instalación de Zsh y Git
+Ejecuté el siguiente comando:
+sudo apt update && sudo apt install zsh git -y
+
+## Instalación de oh-my-zsh
+Usé el siguiente comando:
+sh -c "$(curl -fsSL
+https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+
+## Cambios realizados
+- Se instaló Zsh como nueva shell.
+- Se cambió el prompt predeterminado al tema por defecto de oh-my-zsh.
+- Se observa un nuevo diseño en la terminal.
+

@@ -1,0 +1,48 @@
+STEPHANY REYES RODRIGUEZ
+
+#Crear la carpeta
+mkdir -p ~/carpeta_prueba
+
+#Crear algunos archivos de prueba
+echo "Este es el archivo 2" > ~/carpeta_prueba/archivo2.txt
+echo "Este es el archivo 3" > ~/carpeta_prueba/archivo3.txt
+
+#Crear archivo .sh
+nano backup_automatico.sh
+
+***Contenido dentro del archivo***
+#!/bin/bash
+
+# Carpeta a respaldar
+CARPETA_ORIGEN="$HOME/carpeta_prueba"
+
+# Carpeta donde guardar las copias
+CARPETA_RESPALDO="$HOME/backup"
+
+# Carpeta de respaldo (crear)
+mkdir -p "$CARPETA_RESPALDO"
+
+# Timestamp para el nombre del archivo (fecha y hora)
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+# Nombre del archivo zip con timestamp
+ARCHIVO_RESPALDO="backup_$TIMESTAMP.zip"
+
+# Crear el respaldo (comprimir carpeta)
+zip -r "$CARPETA_RESPALDO/$ARCHIVO_RESPALDO" "$CARPETA_ORIGEN"
+
+# Registrar la ejecución en backup_log.txt
+echo "Backup creado: $ARCHIVO_RESPALDO en $(date)" >> "$CARPETA_RESPALDO/backup_log.txt"
+
+
+#Dar permiso de ejecución
+chmod +x backup_automatico.sh
+
+#Instalación zip ya que no funcionaba bien y no encontraba el arhivo .zip debido a que no estaba instalado
+sudo apt update && sudo apt install zip -y
+
+
+#Ejecutar script
+./backup_automatico.sh
+
+

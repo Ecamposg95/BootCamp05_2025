@@ -1,0 +1,32 @@
+STEPHANY REYES RODRIGUEZ
+
+#Cambios de archivos detectados en tiempo real 
+#Cambios realizados en otra terminal
+> sudo touch /var/log/prueba2.log
+[sudo] password for stephany-reyes:
+> sudo touch /var/log/prueba3.log
+
+#Cambios detectados en tiempo real
+> chmod +x monitorear_log.sh
+> ./monitorear_log.sh
+📡 Monitoreando cambios en /var/log...
+Setting up watches.
+Watches established.
+2025-05-22 21:57:42 /var/log/ syslog MODIFY
+2025-05-22 21:58:18 /var/log/ syslog MODIFY
+2025-05-22 21:58:18 /var/log/ syslog MODIFY
+2025-05-22 21:58:18 /var/log/ syslog MODIFY
+2025-05-22 21:58:29 /var/log/ auth.log MODIFY
+2025-05-22 21:58:29 /var/log/ prueba3.log CREATE
+2025-05-22 21:58:30 /var/log/ auth.log MODIFY
+2025-05-22 21:58:53 /var/log/ syslog MODIFY
+2025-05-22 21:59:22 /var/log/ syslog MODIFY
+2025-05-22 21:59:22 /var/log/ syslog MODIFY
+2025-05-22 21:59:29 /var/log/ syslog MODIFY
+2025-05-22 22:00:29 /var/log/ syslog MODIFY
+2025-05-22 22:00:29 /var/log/ syslog MODIFY
+2025-05-22 22:00:41 /var/log/ syslog MODIFY
+2025-05-22 22:01:36 /var/log/ syslog MODIFY
+2025-05-22 22:01:36 /var/log/ syslog MODIFY
+2025-05-22 22:01:36 /var/log/ syslog MODIFY
+2025-05-22 22:01:52 /var/log/ syslog MODIFY

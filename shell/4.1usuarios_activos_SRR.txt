@@ -1,0 +1,46 @@
+STEPHANY REYES RODRIGUEZ
+
+who
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+> touch ~/usuarios_activos.txt
+
+> crontab -e
+
+no crontab for stephany-reyes using an empty one
+
+Select an editor. To change later, run 'select-editor'.
+
+1. /bin/nano
+
+<easiest
+
+2. /usr/bin/vim.basic
+
+3. /usr/bin/vim.tiny
+
+4. /bin/ed
+
+Choose 1-4 [1]: 1
+
+crontab: installing new crontab
+
+
+> cat ~/usuarios_activos.txt
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+> cat/usuarios_activos.txt
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+> cat ~/usuarios_activos.txt
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+stephany-reyes pts/1    2025-05-22 19:05
+
+stephany-reyes pts/1    2025-05-22 19:05

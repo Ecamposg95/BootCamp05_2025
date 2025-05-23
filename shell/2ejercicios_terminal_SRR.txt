@@ -1,0 +1,84 @@
+STEPHANY REYES RODRIGUEZ 
+
+#CREAR CARPETA Y MOVERSE DENTRO DE ESA CARPETA
+mkdir carpeta-ejemplo
+cd carpeta-ejemplo
+ 
+#CREAR ARCHIVOS
+touch archivo.txt 
+
+#ESCRIBIR DENTRO DE ARCHIVOS 
+echo "Hola mundo" > archivo.txt
+
+#Buscar archivo llamado "archivo1.txt" 
+find . -name "archivo1.txt" 
+./archivo1.txt/archivo1.txt
+
+#Buscar "Hola" dentro de archivo "archivo.txt"
+Hola mundo 
+
+#Contar líneas dentro de "archivo.txt" 
+wc -l archivo.txt
+1 archivo.txt
+
+#Contar palabras dentro de "archivo.txt"
+wc -w "archivo.txt" 
+2 archivo.txt
+
+#Contar caracteres dentro de "archivo.txt"
+wc -c archivo.txt
+11 archivo.txt
+ 
+
+****CREAR CARPETA Y MOVER ARCHIVOS****
+#crear el archivo del script
+nano mover_archivo.sh
+#Contenido dentro de nano
+#!/bin/bash
+mkdir respaldo
+mv *.txt respaldo/
+
+#Dar permisos de ejecución al script
+chmod +x mover_archivo.sh
+
+Resultado esperado:
+-Se crea una carpeta llamada respaldo dentro del directorio actual.
+-Todos los archivos con extensión .txt se mueven a esa carpeta.
+
+
+****BUSCAR Y CONTAR ARCHIVOS****
+#Crear archivos
+nano contar_archivos.sh
+#Contenjdo dentro del archivo
+#!/bin/bash
+echo "Buscando archivos .txt en el directorio actual..."
+count=$(find . -name "*.txt" | wc -l)
+echo "Se encontraron $count archivos .txt"
+
+#Dar permisos y ejecutar
+chmod +x contar_archivos.sh
+./contar_archivos.sh
+
+Resultado esperado:
+Buscando archivos .txt en el directorio actual...
+Se encontraron 9 archivos .txt
+
+
+****BUSCAR PALABRA DENTRO DE ARCHIVO****
+nano buscar_palabra.sh
+#Copiar dentro del nano 
+#!/bin/bash
+echo "Buscando la palabra 'Hola' en archivos .txt..."
+grep -r "Hola" *.txt
+
+# Dar permisos y ejecutar
+chmod +x buscar_palabra.sh
+./buscar_palabra.sh
+
+Resultado esperado:
+Buscando la palabra 'Hola' en archivos .txt...
+grep: *.txt: No such file or directory
+
+
+
+
