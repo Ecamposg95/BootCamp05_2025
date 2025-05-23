@@ -1,0 +1,8 @@
+Búsqueda de archivos .txt:
+ejercicios/dir1/archivo1.txt
+ejercicios/dir1/archivo2.txt
+Búsqueda de archivos .txt:
+ejercicios/dir1/archivo1.txt
+ejercicios/dir1/archivo2.txt
+Conteo de palabra 'Hola' en archivo1.txt:
+1
