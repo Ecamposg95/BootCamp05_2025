@@ -1,0 +1,64 @@
+/* Este es un comentario, utilizar pagina del link
+Stephany Reyes Rodriguez */
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid #dedede;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  color: #2a7ae2;
+}
+
+h2 {
+  color: #2a7ae2;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #444;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
