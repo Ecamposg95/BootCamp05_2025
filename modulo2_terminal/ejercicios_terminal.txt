@@ -1,0 +1,17 @@
+Archivos .txt encontrados:
+./ejercicios_terminal.txt
+./archivo1.txt
+./dir1/archivo4.txt
+./archivo3.txt
+./dir2/archivo5.txt
+
+Conteo de líneas por archivo:
+8 ./ejercicios_terminal.txt
+0 ./archivo1.txt
+1 ./dir1/archivo4.txt
+0 ./archivo3.txt
+1 ./dir2/archivo5.txt
+
+Buscar palabra 'Danna':
+dir1/archivo4.txt:Hola, soy Danna
+dir3/archivo6.log:Esta es mi prueba att Danna
