@@ -1,0 +1,34 @@
+# Respuestas ejercicios terminal
+
+1. Archivos .txt encontrados:
+
+[paduk@TheDarkKnigth modulo2] $ find ~ -name "*.txt"
+/home/paduk/proyecto-git-ejemplo/hola-editado.txt
+/home/paduk/proyecto-git-ejemplo/hola.txt
+/home/paduk/BootCamp05_2025/shell/modulo2/ejercicios_terminal.txt
+/home/paduk/.cache/tracker3/files/first-index.txt
+/home/paduk/.cache/tracker3/files/last-crawl.txt
+/home/paduk/snap/firefox/common/.mozilla/firefox/e9rh0bsu.default/pkcs11.txt
+/home/paduk/.oh-my-zsh/LICENSE.txt
+/home/paduk/.oh-my-zsh/plugins/golang/templates/search.txt
+/home/paduk/.oh-my-zsh/plugins/golang/templates/package.txt
+/home/paduk/.oh-my-zsh/plugins/emoji/emoji-data.txt
+/home/paduk/.oh-my-zsh/.github/workflows/dependencies/requirements.txt
+
+2. Resultado de buscar "linux" en archivo.txt:
+
+[paduk@TheDarkKnigth modulo2] $ grep "1" ejercicios_terminal.txt
+1. Archivos .txt encontrados:
+[paduk@TheDarkKnigth modulo2] $ grep "resultados" ejercicios
+_terminal.txt
+[paduk@TheDarkKnigth modulo2] $ grep "resultados" ejercicios_terminal.txt
+[paduk@TheDarkKnigth modulo2] $ grep "linux" ejercicios_term
+inal.txt
+2. Resultado de buscar "linux" en archivo.txt:
+
+3. Número de líneas en archivo.txt:
+
+[paduk@TheDarkKnigth modulo2] $ wc -l ejercicios_terminal.txt>
+12 ejercicios_terminal.txt
+
+4. El script saludo.sh funcionó correctamente mostrando "Hola Mundo".
