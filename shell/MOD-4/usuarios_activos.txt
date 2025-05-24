@@ -1,0 +1,2 @@
+tony     seat0        2025-05-23 19:38 (login screen)
+tony     tty2         2025-05-23 19:38 (tty2)
