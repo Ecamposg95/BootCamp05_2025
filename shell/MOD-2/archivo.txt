@@ -1,0 +1,174 @@
+TXTDECOMANDOSestadias
+
+tony@tony12str:~$ cd Documentos
+tony@tony12str:~/Documentos$ mkdir mi_proyecto 
+tony@tony12str:~/Documentos$ cd mi_proyecto
+tony@tony12str:~/Documentos/mi_proyecto$ touch index.html styles.css
+tony@tony12str:~/Documentos/mi_proyecto$ code .
+tony@tony12str:~/Documentos/mi_proyecto$ git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
+ayuda: 
+ayuda: 	git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda: 	git branch -m <nombre>
+Inicializado repositorio Git vacío en /home/tony/Documentos/mi_proyecto/.git/
+tony@tony12str:~/Documentos/mi_proyecto$ git add .
+tony@tony12str:~/Documentos/mi_proyecto$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevos archivos: index.html
+	nuevos archivos: styles.css
+
+tony@tony12str:~/Documentos/mi_proyecto$ git commit -m "Primer commit: Estructura inicial"
+Identidad del autor desconocido
+
+*** Por favor cuéntame quién eres.
+
+Ejecuta
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Tu Nombre"
+
+para configurar la identidad por defecto de tu cuenta.
+Omite --global para configurar tu identidad solo en este repositorio.
+
+fatal: no es posible auto-detectar la dirección de correo (se obtuvo 'tony@tony12str.(none)')
+tony@tony12str:~/Documentos/mi_proyecto$ git config --global user.name "Antonio"
+tony@tony12str:~/Documentos/mi_proyecto$ git config --global user.email "al222310293@gmail.com"
+tony@tony12str:~/Documentos/mi_proyecto$ git config --global --list
+user.name=Antonio
+user.email=al222310293@gmail.com
+tony@tony12str:~/Documentos/mi_proyecto$ git commit -m "Primer commit: Estructura inicial"
+[master (commit-raíz) ae01412] Primer commit: Estructura inicial
+ 2 files changed, 19 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+tony@tony12str:~/Documentos/mi_proyecto$ git remote add origin https://github.com/tony12str/pruebaubuntu.git
+tony@tony12str:~/Documentos/mi_proyecto$ git push -u origin main
+error: src refspec main no concuerda con ninguno
+error: falló el empuje de algunas referencias a 'https://github.com/tony12str/pruebaubuntu.git'
+tony@tony12str:~/Documentos/mi_proyecto$ git branch
+* master
+tony@tony12str:~/Documentos/mi_proyecto$ git branch -m main
+tony@tony12str:~/Documentos/mi_proyecto$ git push -u origin main
+Username for 'https://github.com': tony12str
+Password for 'https://tony12str@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Autenticación falló para 'https://github.com/tony12str/pruebaubuntu.git/'
+tony@tony12str:~/Documentos/mi_proyecto$ git push -u origin main
+Username for 'https://github.com': tony12str
+Password for 'https://tony12str@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Autenticación falló para 'https://github.com/tony12str/pruebaubuntu.git/'
+tony@tony12str:~/Documentos/mi_proyecto$ git push -u origin main
+Username for 'https://github.com': tony12str           
+Password for 'https://tony12str@github.com': 
+remote: Permission to tony12str/pruebaubuntu.git denied to tony12str.
+fatal: no es posible acceder a 'https://github.com/tony12str/pruebaubuntu.git/': The requested URL returned error: 403
+tony@tony12str:~/Documentos/mi_proyecto$ git push -u origin main
+Username for 'https://github.com': tony12str
+Password for 'https://tony12str@github.com': 
+remote: Permission to tony12str/pruebaubuntu.git denied to tony12str.
+fatal: no es posible acceder a 'https://github.com/tony12str/pruebaubuntu.git/': The requested URL returned error: 403
+tony@tony12str:~/Documentos/mi_proyecto$ ls -al ~/.ssh
+total 8
+drwx------  2 tony tony 4096 may 20 09:57 .
+drwxr-x--- 21 tony tony 4096 may 20 15:41 ..
+-rw-------  1 tony tony    0 may 20 09:57 authorized_keys
+tony@tony12str:~/Documentos/mi_proyecto$ ssh-keygen -t rsa -b 4096 -C "al222310293@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/tony/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/tony/.ssh/id_rsa
+Your public key has been saved in /home/tony/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:nwJ4XqkyDEpznT+ddK1UsvwU5R97k5J6NpcKS2FS6ik al222310293@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|               . |
+|              o  |
+|           o o o |
+|    ...  .+ = o =|
+| o...oo S+ B = +o|
+|..oo o.++.B.* . +|
+|.   + oE.=o= = o |
+|     o  o.. = +  |
+|           . .   |
++----[SHA256]-----+
+tony@tony12str:~/Documentos/mi_proyecto$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOeUO+a8CQaciZqXce5wY+7rVFtkeyUtfsre7HeqMB0STuQ5TOd/wzyP+l3DM2EP8HStVK2ADwEqdbLhi+xdS/rwXrSdWGwvXQFirCngqqy7APRJLE6ThMEs6QdJARIwuhIr+7P/s7PihBpYuQMhd9EGM4p+LPHTtjcRbfAgdss9MYK224H9MWZnbVEZoVv9TRLyZ4uYvU+baXLLjsQEY165R3OvaL4y0TPujzRDcFJGT2l1MZKYlY/R7CnZF/voXe40yFHH05L8POWA+ZQjvF8g25vHrvaM7MrcLg3MeXiJ6VgxcFfH+qPFpb9IalpxD9XfFK7u/+Xlio0NbDg5IhDLWKs0FrT9uhUol2NlXwakyWTXR9Vf25YPDLbMsE5KjHsehe1wK8Kj45CdvPtj+3P25FKk8Zkq29QAL3zZj8F3BOCx1KDFqM+j4klUkgrTN/StZCvYOm3bm6E+DYO2ntCfcS+80sNe/j/VQJN3U0vkviURdZjmauvxCRgmJOgR+VXfTGHMEFoFmgDyOKgT+ho33+RBTdYYr2S24CkUmOMdwbxelZNlByaHBXphP+sLHV5ZSMxFE6XztqRMfGnbvJxytgWl9CF3M5IgyHn5qyjZT5YlWPxRkQt2U7WVEAG+JUFoY6ys7ihFlpDrJjCP4aRmVpuhTSi88zdr+jYF+9+w== al222310293@gmail.com
+tony@tony12str:~/Documentos/mi_proyecto$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOeUO+a8CQaciZqXce5wY+7rVFtkeyUtfsre7HeqMB0STuQ5TOd/wzyP+l3DM2EP8HStVK2ADwEqdbLhi+xdS/rwXrSdWGwvXQFirCngqqy7APRJLE6ThMEs6QdJARIwuhIr+7P/s7PihBpYuQMhd9EGM4p+LPHTtjcRbfAgdss9MYK224H9MWZnbVEZoVv9TRLyZ4uYvU+baXLLjsQEY165R3OvaL4y0TPujzRDcFJGT2l1MZKYlY/R7CnZF/voXe40yFHH05L8POWA+ZQjvF8g25vHrvaM7MrcLg3MeXiJ6VgxcFfH+qPFpb9IalpxD9XfFK7u/+Xlio0NbDg5IhDLWKs0FrT9uhUol2NlXwakyWTXR9Vf25YPDLbMsE5KjHsehe1wK8Kj45CdvPtj+3P25FKk8Zkq29QAL3zZj8F3BOCx1KDFqM+j4klUkgrTN/StZCvYOm3bm6E+DYO2ntCfcS+80sNe/j/VQJN3U0vkviURdZjmauvxCRgmJOgR+VXfTGHMEFoFmgDyOKgT+ho33+RBTdYYr2S24CkUmOMdwbxelZNlByaHBXphP+sLHV5ZSMxFE6XztqRMfGnbvJxytgWl9CF3M5IgyHn5qyjZT5YlWPxRkQt2U7WVEAG+JUFoY6ys7ihFlpDrJjCP4aRmVpuhTSi88zdr+jYF+9+w== al222310293@gmail.com
+tony@tony12str:~/Documentos/mi_proyecto$ eval "$(ssh-agent -s)"
+Agent pid 37853
+tony@tony12str:~/Documentos/mi_proyecto$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /home/tony/.ssh/id_rsa: 
+Identity added: /home/tony/.ssh/id_rsa (al222310293@gmail.com)
+tony@tony12str:~/Documentos/mi_proyecto$ ssh -T git@github.com
+The authenticity of host 'github.com (140.82.114.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi tony12str! You've successfully authenticated, but GitHub does not provide shell access.
+tony@tony12str:~/Documentos/mi_proyecto$ git remote -v
+origin	https://github.com/tony12str/pruebaubuntu.git (fetch)
+origin	https://github.com/tony12str/pruebaubuntu.git (push)
+tony@tony12str:~/Documentos/mi_proyecto$ git remote set-url origin git@github.com:tony12str/pruebaubuntu.git
+tony@tony12str:~/Documentos/mi_proyecto$ git remote -v
+origin	git@github.com:tony12str/pruebaubuntu.git (fetch)
+origin	git@github.com:tony12str/pruebaubuntu.git (push)
+tony@tony12str:~/Documentos/mi_proyecto$ git push origin main
+Enumerando objetos: 4, listo.
+Contando objetos: 100% (4/4), listo.
+Compresión delta usando hasta 16 hilos
+Comprimiendo objetos: 100% (4/4), listo.
+Escribiendo objetos: 100% (4/4), 596 bytes | 596.00 KiB/s, listo.
+Total 4 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To github.com:tony12str/pruebaubuntu.git
+ * [new branch]      main -> main
+tony@tony12str:~/Documentos/mi_proyecto$ eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+Agent pid 37939
+Enter passphrase for /home/tony/.ssh/id_rsa: 
+Identity added: /home/tony/.ssh/id_rsa (al222310293@gmail.com)
+tony@tony12str:~/Documentos/mi_proyecto$ ssh-add -l
+4096 SHA256:nwJ4XqkyDEpznT+ddK1UsvwU5R97k5J6NpcKS2FS6ik al222310293@gmail.com (RSA)
+tony@tony12str:~/Documentos/mi_proyecto$ ssh -T git@github.com
+Hi tony12str! You've successfully authenticated, but GitHub does not provide shell access.
+tony@tony12str:~/Documentos/mi_proyecto$ git remote -v
+origin	git@github.com:tony12str/pruebaubuntu.git (fetch)
+origin	git@github.com:tony12str/pruebaubuntu.git (push)
+tony@tony12str:~/Documentos/mi_proyecto$ git push origin main
+Everything up-to-date
+tony@tony12str:~/Documentos/mi_proyecto$ git config --global user.name "tony12str"
+git config --global user.email "al222310293@gmail.com"
+tony@tony12str:~/Documentos/mi_proyecto$ git remote -v
+origin	git@github.com:tony12str/pruebaubuntu.git (fetch)
+origin	git@github.com:tony12str/pruebaubuntu.git (push)
+tony@tony12str:~/Documentos/mi_proyecto$ ssh -T git@github.com
+Hi tony12str! You've successfully authenticated, but GitHub does not provide shell access.
+tony@tony12str:~/Documentos/mi_proyecto$ ls -al ~/.ssh/
+total 24
+drwx------  2 tony tony 4096 may 20 16:29 .
+drwxr-x--- 21 tony tony 4096 may 20 16:41 ..
+-rw-------  1 tony tony    0 may 20 09:57 authorized_keys
+-rw-------  1 tony tony 3434 may 20 16:05 id_rsa
+-rw-r--r--  1 tony tony  747 may 20 16:05 id_rsa.pub
+-rw-------  1 tony tony  978 may 20 16:29 known_hosts
+-rw-r--r--  1 tony tony  142 may 20 16:29 known_hosts.old
+tony@tony12str:~/Documentos/mi_proyecto$ 
+
+
