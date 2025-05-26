@@ -4,7 +4,7 @@
 rama="CPS"
 
 # Mensaje de commit por defecto
-mensaje_commit="Script automatico"
+mensaje_commit="Script automático - $(date '+%Y-%m-%d %H:%M:%S')"
 
 # Mostrar el estado actual
 echo "Estado actual del repositorio:"

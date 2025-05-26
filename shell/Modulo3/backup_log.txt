@@ -10,3 +10,6 @@ tar: Removing leading `/' from member names
 [Sat May 24 13:15:01 CST 2025] Copia de seguridad creada: /home/palmac/BootCamp05_2025/backups/respaldo_2025-05-24_13-15-01.tar.gz
 tar: Removing leading `/' from member names
 [Sat May 24 13:20:02 CST 2025] Copia de seguridad creada: /home/palmac/BootCamp05_2025/backups/respaldo_2025-05-24_13-20-01.tar.gz
+
+Prueba de monitoreo de backup
+2025-05-26 11:28:59 - Prueba backup registrado
