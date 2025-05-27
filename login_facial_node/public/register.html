@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro con Reconocimiento Facial</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Cargar face-api.js desde CDN -->
+<!-- ✅ Esta versión clásica y estable FUNCIONA -->
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Registro con Reconocimiento Facial</h1>
+  <video id="inputVideo" autoplay muted width="480" height="360" style="border:1px solid #000;"></video>
+  <br/>
+  <p id="status">Esperando...</p>
+  <button id="captureBtn">Capturar y Registrar</button>
+</body>
+</html>
