@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto Reconocimiento Facial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center text-sky-700">Proyecto Reconocimiento Facial</h1>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Registro -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Registro</h2>
+        <input id="name" type="text" placeholder="Nombre completo"
+               class="w-full border border-gray-300 rounded px-4 py-2 mb-4 focus:outline-sky-500" />
+        <video id="video" autoplay playsinline class="w-full rounded border border-gray-300 mb-4"></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <button onclick="register()" class="w-full bg-sky-600 text-white font-semibold py-2 rounded hover:bg-sky-700">
+          Registrar
+        </button>
+      </section>
+
+      <!-- Inicio de sesión -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Inicio de Sesión</h2>
+        <video id="videoLogin" autoplay playsinline class="w-full rounded border border-gray-300 mb-4"></video>
+        <canvas id="canvasLogin" class="hidden"></canvas>
+        <button onclick="login()" class="w-full bg-green-600 text-white font-semibold py-2 rounded hover:bg-green-700">
+          Iniciar Sesión
+        </button>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
+
