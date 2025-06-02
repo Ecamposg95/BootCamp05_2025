@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceID Manager - Sistema de Reconocimiento Facial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-user-circle"></i>
+                <h1>FaceID Manager Dayana</h1>
+            </div>
+            <p class="app-description">Sistema de gestión de identidades faciales</p>
+        </header>
+
+        <main class="app-content">
+            <section class="form-section card">
+                <h2><i class="fas fa-user-plus"></i> Registro Facial</h2>
+                <div class="camera-container">
+                    <div class="video-wrapper">
+                        <video id="video" width="640" height="480" autoplay playsinline></video>
+                        <canvas id="canvas" width="640" height="480"></canvas>
+                        <div class="camera-overlay">
+                            <div class="face-outline"></div>
+                        </div>
+                    </div>
+                    <div class="camera-controls">
+                        <button id="capture-btn" class="btn primary">
+                            <i class="fas fa-camera"></i> Capturar Rostro
+                        </button>
+                        <button id="reset-btn" class="btn secondary">
+                            <i class="fas fa-redo"></i> Reiniciar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name-input"><i class="fas fa-signature"></i> Nombre Completo</label>
+                    <input type="text" id="name-input" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="details-input"><i class="fas fa-info-circle"></i> Detalles Adicionales</label>
+                    <textarea id="details-input" placeholder="Información adicional (opcional)"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button id="save-btn" class="btn success" disabled>
+                        <i class="fas fa-save"></i> Guardar Registro
+                    </button>
+                </div>
+            </section>
+
+            <section class="records-section card">
+                <div class="section-header">
+                    <h2><i class="fas fa-address-book"></i> Registros Existentes</h2>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Buscar registros...">
+                    </div>
+                </div>
+                
+                <div id="loading-indicator" class="loading-indicator">
+                    <img src="loading.gif" alt="Cargando...">
+                    <p>Cargando registros...</p>
+                </div>
+                
+                <div id="records-list" class="records-grid"></div>
+                <div id="no-records" class="no-records">
+                    <i class="fas fa-user-slash"></i>
+                    <p>No se encontraron registros</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Sistema de Reconocimiento Facial &copy; 2023</p>
+        </footer>
+    </div>
+
+    <!-- Modal para confirmar eliminación -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-exclamation-triangle"></i> Confirmar Eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar este registro? Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <button id="cancel-delete" class="btn secondary">Cancelar</button>
+                <button id="confirm-delete" class="btn danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
