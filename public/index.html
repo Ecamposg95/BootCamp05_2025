@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación Facial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .video-container {
+            margin: 1rem 0;
+            display: none;
+        }
+        video {
+            width: 100%;
+            border-radius: 5px;
+            background: #333;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .options {
+            margin-top: 1rem;
+        }
+        #usernameContainer {
+            margin: 1rem 0;
+            display: none;
+            width: 100%;
+        }
+        #username {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        #actionBtn {
+            display: none;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        #statusMessage {
+            margin: 1rem 0;
+            color: #666;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Autenticación Facial</h1>
+        
+        <div class="video-container">
+            <video id="video" autoplay playsinline></video>
+        </div>
+        
+        <div id="usernameContainer">
+            <input type="text" id="username" placeholder="Nombre de usuario">
+        </div>
+        
+        <div id="statusMessage"></div>
+        
+        <button id="actionBtn"></button>
+        
+        <div class="options">
+            <button id="registerBtn">Registrarse</button>
+            <button id="loginBtn">Iniciar Sesión</button>
+         </div>
+    </div>
+
+    <script src="face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
