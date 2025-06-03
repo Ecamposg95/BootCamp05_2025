@@ -1,2 +1,4 @@
 node_modules/
 node_face_recognition/node_modules/@tensorflow/tfjs-node/deps/lib/libtensorflow.so.2.9.1
+IngenieriaEnSoftware/Reconocimiento_Biometrico/venv/lib/python3.12/site-packages/cv2/cv2.abi3.so
+IngenieriaEnSoftware/Reconocimiento_Biometrico/venv/lib/python3.12/site-packages/face_recognition_models/models/shape_predictor_68_face_landmarks.dat
