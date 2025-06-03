@@ -1,0 +1,34 @@
+Ejercicio 1 Buscar archivos .txt en la carpeta personal
+ocupe el comando: find ~ -type f -name "*.txt"
+
+Aproximadamente el comando encontró 80 archivos .txt
+en el directorio personal estos fueron algunos:
+/home/smart/Descargas/pos_inversa-main/pos_inversa-main/node_modules/pusher/LICENSE.txt
+/home/smart/Descargas/pos_inversa-main/pos_inversa-main/node_modules/emoji-regex/LICENSE-MIT.txt
+/home/smart/Descargas/pos_inversa-main/pos_inversa-main/node_modules/tslib/CopyrightNotice.txt
+/home/smart/Descargas/pos_inversa-main/pos_inversa-main/node_modules/tslib/LICENSE.txt
+
+Ejercicio 2 Buscar la palabra "Linux" en archivos .txt
+de la carpeta personal comando: grep -r "Linux" ~/*.txt
+
+No se encontraron coincidencias con la palara "Linux"
+en los archivos.txt
+
+Ejercicio 3 Buscar cuantas veces aparce la palabra "nota" y la letra "o"
+en los archivos .txt en el directorio personal, comandos: grep -ro "nota" ~/*.txt | wc -l
+grep -ro "o" ~/*.txt | wc -l
+La palabra "nota" se encontro un total de 0 veces
+y la letra "o" se encontro un total de 40 veces
+
+Ejercicio 4 Crear una carpeta con el nombre modulo2_pruebas y 3 archivos .txt de pruebas
+comando mkdir modulo2_pruebas
+comandos touch archivo_prueba.txt archivo_prueba2.txt archivo_prueba3.txt
+La carpeta y los archivos se crearon exitosamente
+
+Ejercicio 5 Mover los archvios creados a la carpeta modulo2_pruebas
+comando: mv ~/archivo_prueba.txt archivo_prueba2.txt archivo_prueba3.txt ~/modulo2_pruebas
+los archivos fueron movidos con exito a la carpeta de destino
+
+Ejercicio 6 Comprimir la carpeta modulo2_pruebas en un archivo .zip
+comando: zip -r modulo2_pruebas.zip ~/modulo2_pruebas
+La carpeta se comprimio con exito
