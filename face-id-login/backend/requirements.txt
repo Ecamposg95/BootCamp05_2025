@@ -1,0 +1,6 @@
+flask
+flask-cors
+face_recognition
+pillow
+numpy
+mysql-connector-python

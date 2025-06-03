@@ -13,3 +13,5 @@ tar: Removing leading `/' from member names
 
 Prueba de monitoreo de backup
 2025-05-26 11:28:59 - Prueba backup registrado
+tar: Removing leading `/' from member names
+[Thu May 29 03:00:00 CST 2025] Copia de seguridad creada: /home/palmac/BootCamp05_2025/backups/respaldo_2025-05-29_03-00-00.tar.gz
