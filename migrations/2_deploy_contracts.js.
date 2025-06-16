@@ -1,0 +1,5 @@
+const TicketRegistry = artifacts.require("TicketRegistry");
+
+module.exports = function (deployer) {
+  deployer.deploy(TicketRegistry);
+};

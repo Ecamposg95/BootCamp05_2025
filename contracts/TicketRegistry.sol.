@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract TicketRegistry {
+    struct Ticket {
+        uint id;
+        string usuario;
+        string evento;
+    }
+
+    Ticket[] public tickets;
+    uint public ticketCount;
+
+    event TicketRegistrado(uint id, string usuario, string evento);
+
+    function registrarTicket(string memory _usuario, string memory _evento) public {
+        tickets.push(Ticket(ticketCount, _usuario, _evento));
+        emit TicketRegistrado(ticketCount, _usuario, _evento);
+        ticketCount++;
+    }
+
+    function getTicket(uint index) public view returns (string memory usuario, string memory evento) {
+        Ticket memory t = tickets[index];
+        return (t.usuario, t.evento);
+    }
+}
